@@ -19,7 +19,7 @@ let wheel = document.getElementsByClassName('wheel')[0];
 let ballTrack = document.getElementsByClassName('ballTrack')[0];
 
 function resetGame(){
-	bankValue = 1000;
+	bankValue = 0;
 	currentBet = 0;
 	wager = 5;
 	bet = [];
@@ -40,12 +40,12 @@ function gameOver(){
 	notification.setAttribute('id', 'notification');
 		let nSpan = document.createElement('span');
 		nSpan.setAttribute('class', 'nSpan');
-		nSpan.innerText = 'Bankrupt';
+		nSpan.innerText = 'Te has quedado sin dinero';
 		notification.append(nSpan);
 
 		let nBtn = document.createElement('div');
 		nBtn.setAttribute('class', 'nBtn');
-		nBtn.innerText = 'Play again';	
+		nBtn.innerText = 'Volver';	
 		nBtn.onclick = function(){
 			resetGame();
 		};
@@ -344,10 +344,10 @@ function buildBettingBoard(){
 
 	let otoBoard = document.createElement('div');
 	otoBoard.setAttribute('class', 'oto_board');	
-	let otoBlocks = ['EVEN', 'RED', 'BLACK', 'ODD'];
+	let otoBlocks = ['PAR', 'ROJO', 'NEGRO', 'IMPAR'];
 	for(i = 0; i < otoBlocks.length; i++){
 		let d = i;
-		var colourClass = (otoBlocks[i] == 'RED')? ' redNum' : ((otoBlocks[i] == 'BLACK')? ' blackNum' : '');
+		var colourClass = (otoBlocks[i] == 'ROJO')? ' redNum' : ((otoBlocks[i] == 'NEGRO')? ' blackNum' : '');
 		var otoBlock = document.createElement('div');
 		otoBlock.setAttribute('class', 'oto_block' + colourClass);
 		otoBlock.onclick = function(){
