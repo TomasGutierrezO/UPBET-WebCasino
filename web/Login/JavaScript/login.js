@@ -6,7 +6,6 @@ const firebaseConfig = {
     storageBucket: "upbet-final.appspot.com",
     messagingSenderId: "657319406313",
     appId: "1:657319406313:web:8ea7130a8517922c2fde78",
-    databaseURL: "https://console.firebase.google.com/project/upbet-final/database/upbet-final-default-rtdb/data/~2F?hl=es"
   };
 
 // Inicializar Firebase
