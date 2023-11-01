@@ -1,16 +1,3 @@
-// Configuración de Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyDOtg6PuFfGaa5T5SB-1ldxPps8rlk1DtQ",
-    authDomain: "upbet-final.firebaseapp.com",
-    projectId: "upbet-final",
-    storageBucket: "upbet-final.appspot.com",
-    messagingSenderId: "657319406313",
-    appId: "1:657319406313:web:8ea7130a8517922c2fde78",
-  };
-
-// Inicializar Firebase
-const app = firebase.initializeApp(firebaseConfig);
-
 // Inicializar variables
 const auth = firebase.auth();
 const database = firebase.database();
@@ -30,26 +17,26 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
     // Verificar si el usuario ha iniciado sesión
     if (isUserLoggedIn()) {
-        // El usuario ya ha iniciado sesión, hacer algo si es necesario
+        // El usuario ya ha iniciado sesión, redirigir a la página principal
         console.log('El usuario ya ha iniciado sesión');
+        window.location.href = '/PaginaPrincipal/PaginaPrincipal.html';
     } else {
         // El usuario no ha iniciado sesión, intentar iniciar sesión
         auth.signInWithEmailAndPassword(username, password)
             .then((userCredential) => {
-                // Inicio de sesión exitoso, hacer algo si es necesario
+                // Inicio de sesión exitoso, redirigir a la página principal
                 console.log('Inicio de sesión exitoso', userCredential.user.uid);
-
-                // Redirigir a la página deseada
                 window.location.href = '/PaginaPrincipal/PaginaPrincipal.html';
             })
             .catch((error) => {
-                // Error al iniciar sesión, manejar como desees
+                // Resto del código para manejar errores
                 console.log('Error al iniciar sesión:', error.code, error.message);
                 if (error.code === 'auth/user-not-found') {
                     // Usuario no existe, intentar crear uno nuevo
                     auth.createUserWithEmailAndPassword(username, password)
                         .then((userCredential) => {
                             console.log('Usuario creado exitosamente', userCredential.user.uid);
+                            window.location.href = '/PaginaPrincipal/PaginaPrincipal.html';
                         })
                         .catch((error) => {
                             console.log('Error al crear usuario:', error.code, error.message);
