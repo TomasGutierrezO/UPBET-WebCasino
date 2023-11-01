@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Inicio de sesión - UPBET</title>
+    <link rel="shortcut icon" href="img/logoCasino.ico" type="image/x-ico">
+    <link rel="stylesheet" href="CSS/Login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="todo">
+        <header>
+            <section class="textos-header">
+                <h1>BIENVENIDO A UPBET</h1>
+                <h2>Ganar nunca fue tan fácil</h2>
+            </section>
+        </header>
+        <main>
+            <div class="formulario">
+                <h1>INICIAR SESIÓN</h1>
+                <form method="post" id="loginForm">
+                    <div class="username">
+                        <input type="email" id="usernameInput" required>
+                        <label>Correo Electrónico</label>
+                    </div>
+                    <div class="password">
+                        <input type="password" id="passwordInput" required>
+                        <label>Contraseña</label>
+                    </div>
+                    <input type="submit" value="Siguiente">
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="contenedor-footer">
+                <div class="content-foo">
+                    <h4>Email</h4>
+                    <p>ayuda@upbet.com.co</p>
+                </div>
+                <h2 class="titulo-final">&copy; UPBET </h2>
+            </div>
+        </footer>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
