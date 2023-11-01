@@ -40,7 +40,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
                 console.log('Inicio de sesión exitoso', userCredential.user.uid);
 
                 // Redirigir a la página deseada
-                window.location.href = '../PaginaPrincipal/PaginaPrincipal.html';
+                window.location.href = '/PaginaPrincipal/PaginaPrincipal.html';
             })
             .catch((error) => {
                 // Error al iniciar sesión, manejar como desees
