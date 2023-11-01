@@ -22,7 +22,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         window.location.href = '/PaginaPrincipal/PaginaPrincipal.html';
     } else {
         // El usuario no ha iniciado sesión, intentar iniciar sesión
-        auth.signInWithEmailAndPassword(username, password)
+        signInWithEmailAndPassword(auth, username, password)
             .then((userCredential) => {
                 // Inicio de sesión exitoso, redirigir a la página principal
                 console.log('Inicio de sesión exitoso', userCredential.user.uid);
@@ -33,7 +33,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
                 console.log('Error al iniciar sesión:', error.code, error.message);
                 if (error.code === 'auth/user-not-found') {
                     // Usuario no existe, intentar crear uno nuevo
-                    auth.createUserWithEmailAndPassword(username, password)
+                    createUserWithEmailAndPassword(auth, username, password)
                         .then((userCredential) => {
                             console.log('Usuario creado exitosamente', userCredential.user.uid);
                             window.location.href = '/PaginaPrincipal/PaginaPrincipal.html';
