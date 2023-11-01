@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "source": "/(.*)", "destination": "/" },
-    { "source": "/PaginaPrincipal/PaginaPrincipal.html$", "destination": "/PaginaPrincipal/PaginaPrincipal.html", "headers": { "Authorization": ["bearer <token>"], "always": true } }
+    { "source": "/PaginaPrincipal/PaginaPrincipal.html$", "destination": "/PaginaPrincipal/PaginaPrincipal.html" }
   ]
 }
