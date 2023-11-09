@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Inicio de sesión - UPBET</title>
-    <link rel="shortcut icon" href="img/logoCasino.ico" type="image/x-ico">
+    <link rel="shortcut icon" href="login/img/logoCasino.ico" type="image/x-ico">
     <link rel="stylesheet" href="login/CSS/Login.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
 </head>
@@ -21,15 +21,15 @@
                 <h1>INICIAR SESIÓN</h1>
                 <form method="post" id="loginForm">
                     <div class="username">
-                        <input type="email" id="usernameInput" required>
+                        <input type="text" id="correo" required>
                         <label>Correo Electrónico</label>
                     </div>
                     <div class="password">
-                        <input type="password" id="passwordInput" required>
+                        <input type="password" id="contraseña" required>
                         <label>Contraseña</label>
                     </div>
-                    <a href="PaginaPrincipal/index.html" class="boton">INGRESAR</a>
                 </form>
+                <button class="btn btn-primary" id="ingresar">INGRESAR</button>
             </div>
         </main>
         <footer>
@@ -42,6 +42,10 @@
             </div>
         </footer>
     </div>
-    <script src="login/JavaScript/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    <script src="/web/login/JavaScript/configuracion.js"></script>
+    <script src="/web/login/JavaScript/guardar.js"></script>
 </body>
 </html>

@@ -111,7 +111,7 @@ color: #adadad;
 }
 
 
-.boton{
+.btn.btn-primary{
     display:inline-block;
     width:150px;
     padding:12px;
@@ -123,6 +123,7 @@ color: #adadad;
     font-size: 14px;
     font-weight: 600;
     margin:auto;
+    margin-left: 20%;
 }
 
 
